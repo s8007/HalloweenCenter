@@ -39,14 +39,14 @@ def previous():
     stop()
     play()
 def next_track():
-    if 9>root.track:
+    if 7>root.track:
         root.track+=1
     root.paused=False
     stop()
     play()
 def detect():
     if root.playing and not mixer.music.get_busy() and not root.paused and not root.stopped:
-        if 6>root.track:
+        if 7>root.track:
             next_track()
         elif root.stopped:
             return
